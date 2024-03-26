@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Four Images with Descriptions</title>
+  <style>
+    .image-container {
+  display: flex;
+}
+
+.image {
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.image:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.description {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <div class="image">
+      <img src="image1.jpg" alt="Image 1">
+      <div class="description">Description for Image 1</div>
+    </div>
+    <div class="image">
+      <img src="image2.jpg" alt="Image 2">
+      <div class="description">Description for Image 2</div>
+    </div>
+    <div class="image">
+      <img src="image3.jpg" alt="Image 3">
+      <div class="description">Description for Image 3</div>
+    </div>
+    <div class="image">
+      <img src="image4.jpg" alt="Image 4">
+      <div class="description">Description for Image 4</div>
+    </div>
+  </div>
+</body>
+</html>

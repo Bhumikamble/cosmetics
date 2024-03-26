@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+            background-color:white ;
+            
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        
+    
+        
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .scroll-container {
+          background-color:white;
+          overflow: auto;
+          white-space: nowrap;
+          padding: 10px;
+          width:"100%";
+          
+                }
+
+.scroll-container img {
+  padding: 10px;
+}
+
+        .sign-container button {
+          float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #E75480;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+            color:white;
+}
+.sign-container button:hover {
+  background: #E75480;;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: white;
+  padding: 10px 20px;
+}
+.logo img {
+  float:left;
+  
+}
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  color:black;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.search-container {
+            float:right;
+            }
+        
+            input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+           
+        }
+        .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #E75480;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+            color:white;
+        }
+        
+        .search-container button:hover {
+            background: #E75480;
+        } 
+         .search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 8px;
+ 
+  border-radius: 5px 0 0 5px; 
+}
+.dropbtn {
+  background-color:#E75480;
+ 
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color:white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:none;
+}
+.image-container {
+  display: flex;
+  border: 1px solid #ccc; 
+}
+
+.image {
+  width: 400px; /* Adjust as needed */
+  margin-right: 20px; /* Adjust as needed */
+  border: 1px solid #ccc; 
+  position: relative;
+  
+}
+
+.image:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.image-content {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.description, .price {
+  position: absolute;
+  bottom: 1%;
+  top: 110%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.price {
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+    <img src="nykaa.png" alt="nykaa" width="70%" height="30">
+    </div>
+    <div class="scrolling-text">SALE UPTO 50% OFF ON ALL MAKEUP BRANDS!</div>
+    <div class="search-container">
+    <!-- <form action="/action_page.php"> -->
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Search</button>
+  </div>
+  </nav>
+<hr class="underline">
+
+
+            <div class="navbar">
+              <div class="dropdown">
+                <button class="dropbtn">Brands</button>
+                <div class="dropdown-content">
+                <a href="#">FACESCANADA</a>
+                <a href="#">HUDA BEAUTY</a>
+                <a href="#">LAKME</a>
+                <a href="#">MABELLINE</a>
+                <a href="#">PLUM</a>
+                <a href="#">SUGAR</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Makeup</button>
+                <div class="dropdown-content">
+                <a href="#">Foundation</a>
+                <a href="#">Lipstick</a>
+                <a href="#">Maskara</a>
+                <a href="#">Eyeliner</a>
+                <a href="#">Lipliner</a>
+                <a href="#">Blush</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Fashion</button>
+                <div class="dropdown-content">
+                <a href="#">Mens</a>
+                <a href="#">Womens</a>
+                <a href="#">kids</a>
+                <a href="#">Footwear</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Hair</button>
+                <div class="dropdown-content">
+                <a href="#">Shampoo</a>
+                <a href="#">Conditioner</a>
+                <a href="#">Hair Mask</a>
+                <a href="#">Hair Gel</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Face</button>
+                <div class="dropdown-content">
+                <a href="#">Facewash</a>
+                <a href="#">Face Mask</a>
+                <a href="#">Scrub</a>
+                <a href="#">Aloevera Gel</a>
+                <a href="#">Pimple patch</a>
+                <a href="#">Moisturizers</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Womens wear</button>
+                <div class="dropdown-content">
+                <a href="#">Traditionals</a>
+                <a href="#">Formals</a>
+                <a href="#">Crop tops</a>
+                <a href="#">Jeans</a>
+                <a href="#">Party wear</a>
+                <a href="#"></a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Bath & Body</button>
+                <div class="dropdown-content">
+                <a href="#">Shower Gel</a>
+                <a href="#">Talcom Powder</a>
+                <a href="#">Body Scrub</a>
+                <a href="#">Massage Oils</a>
+                <a href="#">Moisturizers</a>
+                <a href="#">Hand Creams</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Fragrance</button>
+                <div class="dropdown-content">
+                <a href="#">Perfumes</a>
+                <a href="#">Deodrant</a>
+                <a href="#">Sprays</a>
+                <a href="#">Room Freshner</a>
+              </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Accessories</button>
+                <div class="dropdown-content">
+                <a href="#">Bangles</a>
+                <a href="#">Jewellery Sets</a>
+                <a href="#">Necklace</a>
+                <a href="#">Earrings</a>
+                <a href="#">Anklets</a>
+              </div>
+              </div>
+           <div class="sign-container">
+              <button type="submit">Sign up</button>
+            </div>
+            </div>
+            <hr class="underline">
+          
+    <div class="scroll-container">
+    <img src="n3.png" alt="n1" width="100%" height="500">
+    <img src="n2.png" alt="n2" width="100%" height="500">
+    <img src="n4.png" alt="n3" width="100%" height="500">
+    <img src="n5.png" alt="n4" width="100%" height="500">
+  </div>
+
+  <div class="image-container">
+    <div class="image">
+    <div class="image-content" style="background-image: url('1.png');">
+      <div class="description">Description for Image 1</div>
+    </div>
+    </div>
+    <div class="image">
+    <div class="image-content" style="background-image: url('2.png');">
+      <div class="description">Description for Image 2</div>
+    </div>
+    </div>
+    <div class="image">
+    <div class="image-content" style="background-image: url('3.png');">
+      <div class="description">Description for Image 3</div>
+    </div>
+    </div>
+    <div class="image">
+    <div class="image-content" style="background-image: url('1.png');">
+      <div class="description">Description for Image 4</div>
+    </div>
+    </div>
+  </div>
+ 
+  
+
+</body>
+</html>
+
